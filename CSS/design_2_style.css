@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+--Bright-orange: hsl(31, 77%, 52%) ;
+--Dark-cyan: hsl(184, 100%, 22%) ;
+--Very-dark-cyan: hsl(179, 100%, 13%) ;
+--Transparent-white : hsla(0, 0%, 100%, 0.75) ;
+--Very-light-gray : hsl(0, 0%, 95%) ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--Very-light-gray);
+  background-color: inherit;
+  font-size: inherit;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+
+
+img {
+  margin-bottom: 30px;
+  width: 50px;
+}
+.sec_1 {
+  background-color: var(--Bright-orange);
+  grid-area: sec1;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius : 1rem;
+}
+
+.sec_2 {
+  background-color: var(--Dark-cyan);
+  grid-area: sec2;
+}
+
+.sec_3 {
+  background-color: var(--Very-dark-cyan);
+  grid-area: sec3;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius : 1rem;
+}
+
+.sec_1,
+.sec_2,
+.sec_3 {
+  height: fit-content;
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pp1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 35px;
+  color: var(--Transparent-white);
+  margin-bottom: 17px;
+  text-transform: uppercase;
+}
+.pp2 {
+  font-size: 15px;
+  color: var(--Transparent-white);
+  margin-bottom: 70px;
+  line-height: 1.7;
+}
+
+a {
+  transition-duration: 500ms;
+  background-color: var(--Very-light-gray);
+  padding: 13px 26px;
+  border-radius: 25px;
+}
+
+.b1{
+  color: var(--Bright-orange);
+}
+.b2{
+  color: var(--Dark-cyan);
+}
+.b3{
+  color: var(--Very-dark-cyan);
+}
+
+a:hover {
+  background-color: inherit;
+  color: var(--Very-light-gray);
+  outline :2px solid var(--Very-light-gray);
+}
+
+@media (max-width:1440px) {
+  main {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(3,30%);
+    grid-template-rows: 1fr;
+    grid-template-areas: "sec1 sec2 sec3";
+    border-radius: 1rem;
+  }
+  
+}
+
+@media (max-width:375px) {
+  main {
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .sec_1 {
+    border-radius: 0;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+  .sec_3 {
+    border-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+
+
+
+
+
+
+
+
+/* 
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
